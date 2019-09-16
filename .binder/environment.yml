@@ -1,0 +1,10 @@
+name: qiskit-example
+channels:
+dependencies:
+  - python=3.7.*
+  - numpy
+  - matplotlib
+  - pip=19.2.*
+  - pip:
+    - qiskit
+    - qiskit-terra[visualization]
