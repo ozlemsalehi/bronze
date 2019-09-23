@@ -1,0 +1,13 @@
+name: bronze-workshop
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy=1.16.*
+  - jupyterlab=1.1.*
+  - matplotlib=3.1.*
+  - python=3.7.*
+  - pip=19.2.*
+  - pip:
+    - qiskit==0.12.*
+    - qiskit-terra[visualization]
