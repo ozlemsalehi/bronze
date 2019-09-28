@@ -9,5 +9,5 @@ dependencies:
   - python=3.7.*
   - pip=19.2.*
   - pip:
-    - qiskit==0.12.*
+    - qiskit==0.11.*
     - qiskit-terra[visualization]
