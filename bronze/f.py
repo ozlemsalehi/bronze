@@ -5,8 +5,8 @@ def f(circuit,qreg):
 
 def f_8(circuit,quantum_reg):
 	circuit.x(quantum_reg[2])
-	circuit.ccx(quantum_reg[2],quantum_reg[1],quantum_reg[3])
-	circuit.ccx(quantum_reg[3],quantum_reg[0],quantum_reg[4])
-	circuit.ccx(quantum_reg[2],quantum_reg[1],quantum_reg[3])
+	circuit.ccx(quantum_reg[2],quantum_reg[1],quantum_reg[4])
+	circuit.ccx(quantum_reg[4],quantum_reg[0],quantum_reg[3])
+	circuit.ccx(quantum_reg[2],quantum_reg[1],quantum_reg[4])
 	circuit.x(quantum_reg[2])
 	
