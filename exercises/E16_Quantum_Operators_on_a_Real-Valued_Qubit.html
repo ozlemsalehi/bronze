@@ -1,0 +1,415 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="mathjax_macro.js"></script>
+
+<script> qworld_header("Quantum Operators on a Real-Valued Qubit");  </script>
+
+<p align="right" style="font-family:monospace;"><i>prepared by <a href='http://abu.lu.lv' target="_blank">Abuzer Yakaryilmaz<a/> (<a href="http://qworld.lu.lv/index.php/qlatvia/" target="_blank">QLatvia</a>)</i></p>
+<hr>
+
+<br><b>Convention:</b> <i>The default direction of the rotations is counter-clockwise.</i><br><br>
+
+<hr>
+
+<script> start_div();  </script>
+The rotation on the unit circle with angle $ \theta $ is denoted $ R(\theta) $. What is the matrix form of $ R(\theta) $?
+<br><br>
+<i>(Hint: Apply each candidate matrix to states $ \ket{0} $ and $ \ket{1} $ to verify whether the result is the rotated state.)</i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{rr}{ \\sin\\theta & -\\cos\\theta \\\\ \\cos\\theta & \\sin\\theta } $");
+	print_answer(1,"$ \\mymatrix{rr}{ \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\sin\\theta & \\cos\\theta \\\\ -\\cos\\theta & \\sin\\theta } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\cos\\theta & \\sin\\theta \\\\ -\\sin\\theta & \\cos\\theta } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\cos\\theta & \\sin\\theta \\\\ \\sin\\theta & -\\cos\\theta } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+Which of the following matrices represents the rotation with angle $ \frac{\pi}{6} $ on the unit circle?
+<br><br>
+<script> 
+	print_answer(0,"$ \\hadamard $");
+	print_answer(0,"$ \\X $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\frac{1}{2} & \\frac{\\sqrt{3}}{2} \\\\ \\frac{\\sqrt{3}}{2} & - \\frac{1}{2} } $");
+	print_answer(1,"$ \\mymatrix{rr}{ \\frac{\\sqrt{3}}{2} & - \\frac{1}{2} \\\\ \\frac{1}{2} & \\frac{\\sqrt{3}}{2} } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\frac{\\sqrt{3}}{2} &  \\frac{1}{2} \\\\ - \\frac{1}{2} & \\frac{\\sqrt{3}}{2} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+If $ R(\theta) = \mymatrix{rr}{ -\sqrttwo & -\sqrttwo \\ \sqrttwo & -\sqrttwo } $, what is $ \theta $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\dfrac{\\pi}{4} $");
+	print_answer(1,"$ \\dfrac{3\\pi}{4} $");
+	print_answer(0,"$ \\dfrac{5\\pi}{4} $");
+	print_answer(0,"$ \\dfrac{7\\pi}{4} $");
+	print_answer(0,"$ \\dfrac{-\\pi}{4} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+If $ R(\theta) = \mymatrix{rr}{ -\sqrttwo & \sqrttwo \\ -\sqrttwo & -\sqrttwo } $, what is $ \theta $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\dfrac{\\pi}{4} $");
+	print_answer(0,"$ \\dfrac{3\\pi}{4} $");
+	print_answer(1,"$ \\dfrac{5\\pi}{4} $");
+	print_answer(0,"$ \\dfrac{7\\pi}{4} $");
+	print_answer(0,"$ \\dfrac{-\\pi}{4} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+If $ R(\theta) $ is applied to a qubit initially in state $ \ket{0} $ three times, what is the final state?
+<br><br>
+<script> 
+	print_answer(1,"$ \\myrvector{ \\cos (3\\theta) \\\\ \\sin (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\cos (3\\theta) \\\\ -\\sin (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\sin (3\\theta) \\\\ \\cos (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\sin (3\\theta) \\\\ -\\cos (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ -\\sin (3\\theta) \\\\ \\cos (3\\theta) } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+If $ R(-\theta) $ is applied to a qubit initially in state $ \ket{0} $ three times, what is the final state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myrvector{ \\cos (3\\theta) \\\\ \\sin (3\\theta) } $");
+	print_answer(1,"$ \\myrvector{ \\cos (3\\theta) \\\\ -\\sin (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\sin (3\\theta) \\\\ \\cos (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\sin (3\\theta) \\\\ -\\cos (3\\theta) } $");
+	print_answer(0,"$ \\myrvector{ -\\sin (3\\theta) \\\\ \\cos (3\\theta) } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+If $ R(\theta) $ is applied to a qubit initially in state $ \ket{1} $ twice, what is the final state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myrvector{ \\cos (2\\theta) \\\\ \\sin (2\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\cos (2\\theta) \\\\ -\\sin (2\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\sin (2\\theta) \\\\ \\cos (2\\theta) } $");
+	print_answer(0,"$ \\myrvector{ \\sin (2\\theta) \\\\ -\\cos (2\\theta) } $");
+	print_answer(1,"$ \\myrvector{ -\\sin (2\\theta) \\\\ \\cos (2\\theta) } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+The rotation operator $ R(\frac{3\pi}{7}) $ is applied to a qubit initially in state $ \ket{0} $ $n$ times. If the final state is $ \ket{0} $, which one of the followings can be a value of $ n $?
+<br><br>
+<script> 
+	print_answer(0,"$ 3 $");
+	print_answer(0,"$ 9 $");
+	print_answer(0,"$ 10 $");
+	print_answer(1,"$ 14 $");
+	print_answer(0,"$ 21 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a qubit in state $ \ket{0} $. The rotations $ R(\frac{\pi}{3}) $ and $ R(\frac{\pi}{6}) $ are applied $ m $ and $ n $ times, respectively. If the final state is $ -\ket{1} $, what can be the values of $ (m,n) $?
+<br><br>
+<script> 
+	print_answer(0,"$ (1,1) $");
+	print_answer(0,"$ (2,2) $");
+	print_answer(0,"$ (1,2) $");
+	print_answer(0,"$ (2,1) $");
+	print_answer(1,"$ (3,3) $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a qubit in state $ \ket{0} $. The rotations $ R(\frac{\pi}{3}) $ and $ R(-\frac{\pi}{6}) $ are applied $ m $ and $ n $ times, respectively. If the final state is $ -\ket{1} $, what can be the values of $ (m,n) $?
+<br><br>
+<script> 
+	print_answer(1,"$ (20,11) $");
+	print_answer(0,"$ (20,9) $");
+	print_answer(0,"$ (20,7) $");
+	print_answer(0,"$ (20,5) $");
+	print_answer(0,"$ (20,3) $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+The reflection on the unit circle having the line of reflection with angle $ \theta $ is denoted $ Ref(\theta) $. What is the matrix form of $ Ref(\theta) $?
+<br><br>
+<i>(Hint: Apply each candidate matrix to the states $ \ket{0} $ and $ \ket{1} $ to verify whether the result is the reflected state.)</i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{rr}{ \\sin (2\\theta) & -\\cos (2\\theta) \\\\ \\cos (2\\theta) & \\sin (2\\theta) } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\cos (2\\theta) & -\\sin (2\\theta) \\\\ \\sin (2\\theta) & \\cos (2\\theta) } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\sin (2\\theta) & \\cos (2\\theta) \\\\ -\\cos (2\\theta) & \\sin (2\\theta) } $");
+	print_br();
+	print_answer(0,"$ \\mymatrix{rr}{ \\cos (2\\theta) & \\sin (2\\theta) \\\\ -\\sin (2\\theta) & \\cos (2\\theta) } $");
+	print_answer(1,"$ \\mymatrix{rr}{ \\cos (2\\theta) & \\sin (2\\theta) \\\\ \\sin (2\\theta) & -\\cos (2\\theta) } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+If $ Ref(\theta) = \hadamard $, what is $ \theta $?
+<br><br>
+<i>(Hint: Apply each candidate matrix to the states $ \ket{0} $ and $ \ket{1} $ to verify whether the result is the reflected state.)</i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\pi $");
+	print_answer(0,"$ \\frac{\\pi}{2} $");
+	print_answer(0,"$ \\frac{\\pi}{4} $");
+	print_answer(1,"$ \\frac{\\pi}{8} $");
+	print_answer(0,"$ 0 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+If $ Ref(\theta) = \X $, what is $ \theta $?
+<br><br>
+<i>(Hint: Apply each candidate matrix to the states $ \ket{0} $ and $ \ket{1} $ to verify whether the result is the reflected state.)</i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\pi $");
+	print_answer(0,"$ \\frac{\\pi}{2} $");
+	print_answer(1,"$ \\frac{\\pi}{4} $");
+	print_answer(0,"$ \\frac{\\pi}{8} $");
+	print_answer(0,"$ 0 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+If $ Ref(\theta) = \Z $, what is $ \theta $?
+<br><br>
+<i>(Hint: Apply each candidate matrix to the states $ \ket{0} $ and $ \ket{1} $ to verify whether the result is the reflected state.)</i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\pi $");
+	print_answer(0,"$ \\frac{\\pi}{2} $");
+	print_answer(0,"$ \\frac{\\pi}{4} $");
+	print_answer(0,"$ \\frac{\\pi}{8} $");
+	print_answer(1,"$ 0 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+
+<script> start_div();  </script>
+What is the matrix form of the reflection having the line of reflection $ y=-x $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{rr}{ 1 & 0 \\\\ 0 & 1 } $");
+	print_answer(0,"$ \\mymatrix{rr}{ 0 & 1 \\\\ 1 & 0 } $");
+	print_answer(0,"$ \\mymatrix{rr}{ 1 & 0 \\\\ 0 & -1 } $");
+	print_answer(1,"$ \\mymatrix{rr}{ 0 & -1 \\\\ -1 & 0 } $");
+	print_answer(0,"$ \\mymatrix{rr}{ -1 & 0 \\\\ 0 & -1 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Which of the followings is identical to $ \mymatrix{rr}{ -1 & 0 \\ 0 & 1 } $, where $ Z = \Z $ ?
+<br><br>
+<i>(Hint: Test each candidate whether it maps the state $ \myvector{x \\ y} $ to the state $ \myvector{ -x \\ y } $.) </i>
+<br><br>
+<script> 
+	print_answer(0,"$ ZZ $");
+	print_answer(0,"$ ZX $");
+	print_answer(0,"$ XZ $");
+	print_answer(1,"$ XZX $");
+	print_answer(0,"$ ZXZ $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+What is $ Ref(\theta) \cdot \myvector{ \cos \theta' \\ \sin \theta'  } $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myvector{ \\cos (\\theta + \\theta')\\\\ \\sin (\\theta + \\theta') } $");
+	print_answer(0,"$ \\myvector{ \\cos (\\theta - \\theta')\\\\ \\sin (\\theta - \\theta') } $");
+	print_answer(1,"$ \\myvector{ \\cos (2\\theta - \\theta')\\\\ \\sin (2\\theta - \\theta') } $");
+	print_answer(0,"$ \\myvector{ \\cos (-\\theta + \\theta')\\\\ \\sin (-\\theta + \\theta') } $");
+	print_answer(0,"$ \\myvector{ \\cos (-2\\theta + \\theta')\\\\ \\sin (-2\\theta + \\theta')} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Let $ \ket{u} $ is a quantum state on the unit circle with angle $ \theta' $. If we apply the operators $ Ref(\theta_1) $ and $ Ref(\theta_2) $ in order, what is the angle of the final state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\theta_1 + \\theta_2 - \\theta' $");
+	print_answer(1,"$ 2\\theta_1 - 2\\theta_2 + \\theta' $");
+	print_answer(0,"$ 2\\theta_1 + 2\\theta_2 - \\theta' $");
+	print_answer(0,"$ -2\\theta_1 - 2\\theta_2 + \\theta' $");
+	print_answer(0,"$ 2\\theta_1 + 2\\theta_2 + \\theta' $");	
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Which one of the following operators maps the state $ \myvector{\cos \theta \\ \sin \theta} $ to the state $ \myvector{\cos (- \theta) \\ \sin (- \theta)} $?
+<br><br>
+<i>(Hint: Determine (i) whether $ \sin \theta = \sin (-\theta) $ or not and (ii) whether $ \cos \theta = \cos (-\theta) $ or not.) </i>
+<br><br>
+<script> 
+	print_answer(1,"$ Z $");
+	print_answer(0,"$ H $");
+	print_answer(0,"$ X $");
+	print_answer(0,"$ -X$");
+	print_answer(0,"$ -H $");	
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+Which one of the following operators is identical to $ Ref(\theta) $?
+<br><br>
+<i>(Hint: Any arbitrary state, say $ \ket{u} $, on the unit circle is represented by its angle, say $ \theta' $. Find the angle of $ Ref(\theta) \ket{u} $ and compare it with the angle of each quantum state obtained by applying the candidate operators.)
+<br><br>
+<script> 
+	print_answer(0,"$ R(\\theta) X $");
+	print_answer(0,"$ R(\\theta) R(-\\theta) $");
+	print_answer(1,"$ R(\\theta) R(\\theta) Z  $");
+	print_answer(0,"$ R(\\theta) R(\\theta) X $");
+	print_answer(0,"$ X R(\\theta) X $");	
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Let $ \ket{u_1} = \myvector{ \cos \theta_1 \\ \sin \theta_1 } $ and $ \ket{u_2} = \myvector{ \cos \theta_2 \\ \sin \theta_2 } $ be two different quantum states, where $ \theta1, \theta_2 \in (0,\pi) $. If the probabilities of being in states $ \ket{0} $ for $ \ket{u_1} $ and  $ \ket{u_2} $ are the same, what is the relation between $ \theta_1 $ and $ \theta_2 $?
+<br><br>
+<script> 
+	print_answer(0,"$ | \\theta_1 - \\theta_2 | = \\dfrac{\\pi}{2} $");
+	print_answer(0,"$ \\theta_1 + \\theta_2 = \\dfrac{\\pi}{2} $");
+	print_answer(1,"$ \\theta_1 + \\theta_2 = \\pi $");
+	print_answer(0,"$ | \\theta_1 - \\theta_2 | = \\dfrac{\\pi}{4} $");
+	print_answer(0,"$ \\theta_1 + \\theta_2 = \\dfrac{3\\pi}{2} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Which one of the following pairs of quantum states is perfectly distinguishable? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\myrvector{ \\sqrttwo \\\\ -\\sqrttwo } \\mbox{ and } \\myrvector{ -\\sqrttwo \\\\ \\sqrttwo } $");
+	print_answer(0,"$ \\myrvector{ \\sqrttwo \\\\ \\sqrttwo } \\mbox{ and } \\myrvector{ -\\sqrttwo \\\\ -\\sqrttwo } $");
+	print_answer(1,"$ \\myrvector{ \\frac{1}{\\sqrt{3}} \\\\ -\\frac{\\sqrt{2}}{\\sqrt{3}}} \\mbox{ and } \\myrvector{ -\\frac{\\sqrt{2}}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{3}} } $");
+	print_br();
+	print_answer(0,"$ \\myrvector{ \\frac{1}{\\sqrt{3}} \\\\ \\frac{\\sqrt{2}}{\\sqrt{3}}} \\mbox{ and } \\myrvector{ \\frac{1}{\\sqrt{3}} \\\\ -\\frac{\\sqrt{2}}{\\sqrt{3}}} $");
+	print_answer(0,"$ \\myrvector{ \\frac{1}{\\sqrt{3}} \\\\ \\frac{\\sqrt{2}}{\\sqrt{3}}} \\mbox{ and } \\myrvector{ -\\frac{\\sqrt{2}}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{3}} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Which one of the following pairs of quantum states is perfectly distinguishable? 
+<br><br>
+<script> 
+	print_answer(1,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} - \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{2}{7}}  \\ket{0} - \\sqrt{\\frac{5}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} - \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{5}{7}}  \\ket{0} - \\sqrt{\\frac{2}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} + \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{2}{7}}  \\ket{0} - \\sqrt{\\frac{5}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} + \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{5}{7}}  \\ket{0} - \\sqrt{\\frac{2}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0}+\\sqrt{\\frac{2}{7}}  \\ket{1} , \\sqrt{\\frac{5}{7}}  \\ket{0} - \\sqrt{\\frac{2}{7}} \\ket{1} } $");
+	print_br();
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Which one of the following pairs of quantum states cannot be distinguishable? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{0} \\mbox{ and } \\ket{1} $");
+	print_answer(0,"$ \\ket{0} \\mbox{ and }-\\ket{1} $");
+	print_answer(1,"$ -\\ket{1} \\mbox{ and } \\ket{1} $");
+	print_answer(0,"$ \\ket{+} \\mbox{ and } \\ket{-} $");
+	print_answer(0,"$ -\\ket{+} \\mbox{ and } \\ket{-} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+Which one of the following pairs of quantum states cannot be distinguishable? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} - \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{2}{7}}  \\ket{0} - \\sqrt{\\frac{5}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} - \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{5}{7}}  \\ket{0} - \\sqrt{\\frac{2}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} + \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{2}{7}}  \\ket{0} - \\sqrt{\\frac{5}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(1,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0} + \\sqrt{\\frac{2}{7}}  \\ket{1} ,  -\\sqrt{\\frac{5}{7}}  \\ket{0} - \\sqrt{\\frac{2}{7}} \\ket{1} } $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{5}{7}} \\ket{0}+\\sqrt{\\frac{2}{7}}  \\ket{1} , \\sqrt{\\frac{5}{7}}  \\ket{0} - \\sqrt{\\frac{2}{7}} \\ket{1} } $");
+	print_br();
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script>
+	print_check_all(); 
+	inialize_user_answers()
+</script>
+

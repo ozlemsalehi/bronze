@@ -1,0 +1,283 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="mathjax_macro.js"></script>
+
+<script> qworld_header("Quantum Correlation");  </script>
+
+<p align="right" style="font-family:monospace;"><i>prepared by <a href='http://abu.lu.lv' target="_blank">Abuzer Yakaryilmaz<a/> (<a href="http://qworld.lu.lv/index.php/qlatvia/" target="_blank">QLatvia</a>)</i></p>
+<hr>
+
+<br><b>Conventions:</b> <i>When the qubits are enumerated as $ q_0,\ldots,q_n $, we combine them as $ q_n \otimes q_{n-1} \otimes \cdots \otimes q_0 $ and then read in the order $ q_n,q_{n-1},\ldots,q_0 $.
+<br><br> CNOT(controlled_qubit,target_qubit) represents the Controlled-NOT operator.
+</i><br><br>
+
+<hr>
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $ and each is in state $ \ket{0} $. Which one of the following operators leads the state of the composite system to $ \sqrttwo \ket{00} + \sqrttwo\ket{11} $?
+<br><br>
+<script> 
+	print_answer(0,"$ H(q_1),H(q_0) $"); print_br();
+	print_answer(0,"$ H(q_1),CNOT(q_0,q_1) $"); print_br();
+	print_answer(1,"$ H(q_1),CNOT(q_1,q_0) $"); print_br();
+	print_answer(0,"$ CNOT(q_0,q_1),H(q_1) $"); print_br();
+	print_answer(0,"$ CNOT(q_1,q_0),H(q_1) $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $ that is in state $ \ket{00} $. Which one of the following operators leads the state of the composite system to $ \sqrttwo \ket{01} + \sqrttwo\ket{10} $?
+<br><br>
+<script> 
+	print_answer(0,"$ H(q_1),X(q_0),H(q_0) $"); print_br();
+	print_answer(0,"$ H(q_1),X(q_1),H(q_0) $"); print_br();
+	print_answer(0,"$ H(q_1),H(q_0),X(q_1) $"); print_br();
+	print_answer(1,"$ X(q_0),H(q_1),CNOT(q_1,q_0) $"); print_br();
+	print_answer(0,"$ H(q_1),X(q_0),CNOT(q_0,q_1) $"); 
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $. What is the matrix representation of $ CNOT(q_1,q_0) $ for this system?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{cccc}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(1,"$ \\mymatrix{cccc}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 } $");
+	print_answer(0,"$ \\mymatrix{cccc}{ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(0,"$ \\mymatrix{cccc}{ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 } $");
+	print_answer(0,"$ \\mymatrix{cccc}{ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 } $");	
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $. What is the matrix representation of $ CNOT(q_0,q_1) $ for this system?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{cccc}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(0,"$ \\mymatrix{cccc}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 } $");
+	print_answer(0,"$ \\mymatrix{cccc}{ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(0,"$ \\mymatrix{cccc}{ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 } $");
+	print_answer(1,"$ \\mymatrix{cccc}{ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $ that is in state $ \frac{1}{2}\ket{00} - \frac{1}{2}\ket{01} - \frac{1}{2}\ket{10} + \frac{1}{2}\ket{11} $. What are the states of $ q_1 $ and $ q_0 $ separately?
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{+} \\mbox{ and } \\ket{+} $");
+	print_answer(1,"$ \\ket{-} \\mbox{ and } \\ket{-} $");
+	print_answer(0,"$ \\ket{+} \\mbox{ and } \\ket{-} $");
+	print_answer(0,"$ \\ket{-} \\mbox{ and } \\ket{+} $");
+	print_answer(0,"$ \\ket{+} \\mbox{ and } -\\ket{+} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $ that is in state $ \ket{00} $. What is the state after applying $ H(q_1) $, $CNOT(q_1,q_0) $, and $ Z(q_0) $ in order?
+<br><br>
+<script> 
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\mypar{ \\ket{00} + \\ket{01} } $");
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\mypar{ \\ket{00} + \\ket{11} } $");
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\mypar{ \\ket{00} - \\ket{01} } $");
+	print_answer(1,"$ \\frac{1}{\\sqrt{2}} \\mypar{ \\ket{00} - \\ket{11} } $");
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\mypar{ \\ket{10} + \\ket{11} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $ that is in state $ \frac{1}{\sqrt{2}}\ket{01} - \frac{1}{\sqrt{2}}\ket{10} $. After applying which one of the following operators, the system will no longer be entangled?
+<br><br>
+<script> 
+	print_answer(0,"$ H(q_1)$");
+	print_answer(0,"$ H(q_2)$");
+	print_answer(0,"$ X(q_1), X(q_0) $");
+	print_answer(0,"$ X(q_1), Z(q_0) $");
+	print_answer(1,"$ CNOT(q_0,q_1) $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $. We apply Hadamard operator to the qubit $ q_0 $ that corresponds to the $ 4 \times 4 $ matrix $ I \otimes H $ applied to the composite sytem. What is this matrix?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{rrrr}{ \\sqrttwo & \\sqrttwo & 0 & 0 \\\\ \\sqrttwo & - \\sqrttwo & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(0,"$ \\mymatrix{rrrr}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & \\sqrttwo & \\sqrttwo \\\\ 0 & 0 & \\sqrttwo & -\\sqrttwo } $");
+	print_answer(1,"$ \\mymatrix{rrrr}{ \\sqrttwo & \\sqrttwo & 0 & 0 \\\\ \\sqrttwo & - \\sqrttwo & 0 & 0 \\\\ 0 & 0 & \\sqrttwo & \\sqrttwo \\\\ 0 & 0 & \\sqrttwo & -\\sqrttwo } $"); print_br();
+	print_answer(0,"$ \\mymatrix{rrrr}{ 0 & 0 & \\sqrttwo & \\sqrttwo \\\\ 0 & 0 & \\sqrttwo & - \\sqrttwo \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 } $");
+	print_answer(0,"$ \\mymatrix{rrrr}{ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ \\sqrttwo & \\sqrttwo & 0 & 0 \\\\ \\sqrttwo & -\\sqrttwo & 0 & 0 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $. 
+What is the final state if $ CNOT(q_0,q_2) $ is applied to state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\ket{101} + \\frac{1}{\\sqrt{3}} \\ket{110} + \\frac{1}{\\sqrt{6}} \\ket{011}  $");
+	print_br();
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\ket{111} + \\frac{1}{\\sqrt{3}} \\ket{100} + \\frac{1}{\\sqrt{6}} \\ket{011}  $");
+	print_br();
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\ket{100} + \\frac{1}{\\sqrt{3}} \\ket{111} + \\frac{1}{\\sqrt{6}} \\ket{011}  $");
+	print_br();
+	print_answer(1,"$ \\frac{1}{\\sqrt{2}} \\ket{001} + \\frac{1}{\\sqrt{3}} \\ket{110} + \\frac{1}{\\sqrt{6}} \\ket{111}  $");
+	print_br();
+	print_answer(0,"$ \\frac{1}{\\sqrt{2}} \\ket{101} + \\frac{1}{\\sqrt{3}} \\ket{111} + \\frac{1}{\\sqrt{6}} \\ket{010}  $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $ that is in state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $. We measure only the qubit $ q_2 $. 
+What is the probability of observing state $ \ket{1} $? 
+<br><br>
+<script> 
+	print_answer(0,"$ 0 $");
+	print_answer(0,"$ \\frac{1}{2}   $");
+	print_answer(0,"$ \\frac{1}{3}   $");
+	print_answer(0,"$ \\frac{1}{6}   $");
+	print_answer(1,"$ \\frac{5}{6}   $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $ that is in state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $. We measure only the qubit $ q_0 $. 
+What is the probability of observing state $ \ket{0} $? 
+<br><br>
+<script> 
+	print_answer(0,"$ 0 $");
+	print_answer(0,"$ \\frac{1}{2}   $");
+	print_answer(1,"$ \\frac{1}{3}   $");
+	print_answer(0,"$ \\frac{1}{6}   $");
+	print_answer(0,"$ \\frac{5}{6}   $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $ that is in state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $. If we measure the qubit $ q_1 $ and observe state $ \ket{1} $, what is the new state of the composity system?
+<br><br>
+<script> 
+	print_answer(0,"$  \\sqrt{ \\frac{1}{3} } \\ket{110} + \\sqrt{ \\frac{1}{6} } \\ket{011}  $");
+	print_answer(1,"$  \\sqrt{ \\frac{2}{3} } \\ket{110} + \\sqrt{ \\frac{1}{3} } \\ket{011}  $"); 
+	print_answer(0,"$  \\sqrt{ \\frac{1}{2} } \\ket{110} + \\sqrt{ \\frac{1}{2} } \\ket{011}  $");
+	print_answer(0,"$  \\ket{110}  $"); 
+	print_answer(0,"$  \\ket{011}  $");	
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $ that is in state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $. If we measure the qubit $ q_1 $ and observe state $ \ket{0} $, what is the new state of the composity system?
+<br><br>
+<script> 
+	print_answer(0,"$  \\ket{000}  $");	
+	print_answer(0,"$  \\ket{001}  $");	
+	print_answer(0,"$  \\ket{010}  $");	
+	print_answer(0,"$  \\ket{011}  $");	
+	print_answer(1,"$  \\ket{101}  $");	
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $ that is in state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $. If we measure the qubit $ q_2 $, which one of the following mixtures is obtained?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{1}{6}}  \\ket{011}} \\mbox{ with probabilty } \\frac{1}{6} ~~\\mbox{ and }~~ \\mypar{ \\sqrt{\\frac{1}{2}} \\ket{101} + \\sqrt{\\frac{1}{3}}  \\ket{110} } \\mbox{ with probabilty } \\frac{5}{6}  $");
+	print_br();
+	print_answer(0,"$ \\mypar{ \\sqrt{\\frac{1}{6}}  \\ket{011}} \\mbox{ with probabilty } \\frac{1}{2} ~~\\mbox{ and }~~ \\mypar{ \\sqrt{\\frac{1}{2}} \\ket{101} + \\sqrt{\\frac{1}{3}}  \\ket{110} } \\mbox{ with probabilty } \\frac{1}{2}  $");
+	print_br();
+	print_answer(1,"$ \\mypar{\\ket{011}} \\mbox{ with probabilty } \\frac{1}{6} ~~\\mbox{ and }~~ \\mypar{ \\sqrt{\\frac{3}{5}} \\ket{101} + \\sqrt{\\frac{2}{5}}  \\ket{110} } \\mbox{ with probabilty } \\frac{5}{6}  $");
+	print_br();
+	print_answer(0,"$ \\mypar{\\ket{011}} \\mbox{ with probabilty } \\frac{1}{2} ~~\\mbox{ and }~~ \\mypar{ \\sqrt{\\frac{3}{5}} \\ket{101} + \\sqrt{\\frac{2}{5}}  \\ket{110} } \\mbox{ with probabilty } \\frac{1}{2}  $");
+	print_br();
+	print_answer(0,"$ \\mypar{\\ket{011}} \\mbox{ with probabilty } 0 ~~\\mbox{ and }~~ \\mypar{ \\sqrt{\\frac{3}{5}} \\ket{101} + \\sqrt{\\frac{2}{5}}  \\ket{110} } \\mbox{ with probabilty } 1  $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with three qubits $ q_2, q_1, q_0 $ that is in state $ \mypar{ \frac{1}{\sqrt{2}} \ket{101} + \frac{1}{\sqrt{3}} \ket{110} + \frac{1}{\sqrt{6}} \ket{011}} $. If we apply Hadamard operator to the qubit $ q_0 $, what will be the new state of system?
+<br><br>
+<script> 
+	print_answer(0,"$ \\sqrt{\\frac{1}{12}} \\ket{010} + \\sqrt{\\frac{1}{12}} \\ket{011} + \\sqrt{\\frac{1}{4}} \\ket{100} + \\sqrt{\\frac{1}{4}} \\ket{101} + \\sqrt{\\frac{1}{6}} \\ket{110} + \\sqrt{\\frac{1}{6}} \\ket{111} $");
+	print_br();
+	print_answer(1,"$ \\sqrt{\\frac{1}{12}} \\ket{010} -  \\sqrt{\\frac{1}{12}} \\ket{011} + \\sqrt{\\frac{1}{4}} \\ket{100} - \\sqrt{\\frac{1}{4}} \\ket{101} + \\sqrt{\\frac{1}{6}} \\ket{110} + \\sqrt{\\frac{1}{6}} \\ket{111} $");
+	print_br();
+	print_answer(0,"$ \\sqrt{\\frac{1}{4}} \\ket{010} +  \\sqrt{\\frac{1}{4}} \\ket{011} + \\sqrt{\\frac{1}{6}} \\ket{100} + \\sqrt{\\frac{1}{6}} \\ket{101} + \\sqrt{\\frac{1}{12}} \\ket{110} + \\sqrt{\\frac{1}{12}} \\ket{111} $");
+	print_br();
+	print_answer(0,"$ \\sqrt{\\frac{1}{4}} \\ket{010} -  \\sqrt{\\frac{1}{4}} \\ket{011} + \\sqrt{\\frac{1}{6}} \\ket{100} - \\sqrt{\\frac{1}{6}} \\ket{101} + \\sqrt{\\frac{1}{12}} \\ket{110} + \\sqrt{\\frac{1}{12}} \\ket{111} $");
+	print_br();
+	print_answer(0,"$ - \\sqrt{\\frac{1}{4}} \\ket{010} -  \\sqrt{\\frac{1}{4}} \\ket{011} + \\sqrt{\\frac{1}{6}} \\ket{100} + \\sqrt{\\frac{1}{6}} \\ket{101} - \\sqrt{\\frac{1}{12}} \\ket{110} - \\sqrt{\\frac{1}{12}} \\ket{111} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $. In which one of the following states the system is not entangled?
+<br><br>
+<script> 
+	print_answer(0,"$ \\frac{1}{2} \\myrvector{ -1 \\\\ 1 \\\\ 1 \\\\ 1 } $");
+	print_answer(0,"$ \\frac{1}{2} \\myrvector{ 1 \\\\ -1 \\\\ -1 \\\\ -1 } $");
+	print_answer(0,"$ \\frac{1}{2} \\myrvector{ -1 \\\\ 1 \\\\ -1 \\\\ -1 } $");
+	print_answer(1,"$ \\frac{1}{2} \\myrvector{ -1 \\\\ 1 \\\\ 1 \\\\ -1 } $");
+	print_answer(0,"$ \\frac{1}{2} \\myrvector{ 1 \\\\ 1 \\\\ 1 \\\\ -1 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a composite system with two qubits $ q_1 $ and $ q_0 $ that is in state $ \ket{00} $. After applying which one of the following operators the system will be in state $ \frac{1}{2} \mypar{ \ket{00} - \ket{01} -\ket{10} - \ket{11} } $ ?
+<br><br>
+<script> 
+	print_answer(0,"$ H(q_1),CNOT(q_1,q_0), H(q_1), Z(q_0) $"); print_br();
+	print_answer(1,"$ H(q_1), X(q_0), CNOT(q_1,q_0), H(q_1), Z(q_0) $"); print_br();
+	print_answer(0,"$ H(q_1),CNOT(q_0,q_1), H(q_1), Z(q_0) $"); print_br();
+	print_answer(0,"$ H(q_1), X(q_0), CNOT(q_1,q_0), H(q_1) $"); print_br();
+	print_answer(0,"$ H(q_1), X(q_0), CNOT(q_1,q_0), H(q_1), Z(q_0) $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script>
+	print_check_all(); 
+	inialize_user_answers()
+</script>
+

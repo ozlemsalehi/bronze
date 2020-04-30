@@ -1,0 +1,332 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="mathjax_macro.js"></script>
+
+<script> qworld_header("Basics of Quantum Systems");  </script>
+
+<p align="right" style="font-family:monospace;"><i>prepared by <a href='http://abu.lu.lv' target="_blank">Abuzer Yakaryilmaz<a/> (<a href="http://qworld.lu.lv/index.php/qlatvia/" target="_blank">QLatvia</a>)</i></p>
+<hr>
+
+
+<script> start_div();  </script>
+If $ x =  \frac{1}{2} $, which of the following vectors can be a valid quantum state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myvector{x} $");
+	print_answer(0,"$ \\myvector{x \\\\ x } $");
+	print_answer(0,"$ \\myvector{x \\\\ x \\\\ x} $");
+	print_answer(1,"$ \\myvector{x \\\\ x \\\\ x \\\\ x } $");
+	print_answer(0,"$ \\myvector{x \\\\ x \\\\ x \\\\ x \\\\ x } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+If $ \ket{u} = \myvector{ \frac{1}{2} \\ x \\ y} \in \mathbb{R}^3 $ is a quantum state, which one of the following equations cannot be possible?
+<br><br>
+<script> 
+	print_answer(0,"$x+y = \\frac{1}{2} $");
+	print_answer(0,"$x+y = \\frac{3}{4} $");
+	print_answer(0,"$x-y=0$");
+	print_answer(1,"$x^2+y^2 = \\frac{1}{2} $");
+	print_answer(0,"$x^2+y^2 = \\frac{3}{4} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a three state quantum system. If the system is in the quantum state $ \ket{u} = \myvector{ \frac{1}{3}-\frac{1}{\sqrt{3}} \\ \frac{1}{3}+\frac{1}{\sqrt{3}}  \\ x } \in \mathbb{R}^3  $, what is the probability of being in the third state?
+<br><br>
+<script> 
+	print_answer(1,"$ \\frac{1}{9} $");
+	print_answer(0,"$ \\frac{1}{8} $");
+	print_answer(0,"$ \\frac{1}{6} $");
+	print_answer(0,"$ \\frac{1}{3} $");
+	print_answer(0,"$ \\frac{1}{2} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+If $ \ket{u} \in \mathbb{R}^2 $ is a quantum state on the unit circle with angle is $ \frac{2\pi}{3} $, what is $ \ket{u} $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myrvector{ \\frac{1}{2} \\\\ \\frac{\\sqrt{3}}{2} } $");
+	print_answer(1,"$ \\myrvector{ -\\frac{1}{2} \\\\ \\frac{\\sqrt{3}}{2} } $");
+	print_answer(0,"$ \\myrvector{ \\frac{\\sqrt{3}}{2} \\\\ \\frac{1}{2} } $");
+	print_answer(0,"$ \\myrvector{ -\\frac{\\sqrt{3}}{2} \\\\ \\frac{1}{2} } $");
+	print_answer(0,"$ \\myrvector{ -\\frac{\\sqrt{3}}{2} \\\\ -\\frac{1}{2} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+What is $ H^4 $, where $ H $ is Hadamard operator?
+<br><br>
+<script> 
+	print_answer(0,"$ \\hadamard $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\onehalf & \\onehalf \\\\ \\onehalf & -\\onehalf } $");
+	print_answer(1,"$ \\I $");
+	print_answer(0,"$ \\X $");
+	print_answer(0,"$ \\Z $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+What is $ H^7 $?
+<br><br>
+<script> 
+	print_answer(1,"$ \\hadamard $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\onehalf & \\onehalf \\\\ \\onehalf & -\\onehalf } $");
+	print_answer(0,"$ \\I $");
+	print_answer(0,"$ \\X $");
+	print_answer(0,"$ \\Z $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a qubit in state $ \ket{0} $. We apply the operators $ H, X, X, H, X $ in order, where $ X $ is NOT operator. What is the final state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{0} $");
+	print_answer(1,"$ \\ket{1} $");
+	print_answer(0,"$ -\\ket{0} $");
+	print_answer(0,"$ -\\ket{1} $");
+	print_answer(0,"$ \\stateplusket $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a qubit in state $ \ket{0} $. We apply the operators $  X, H, X, H, X $ in order. What is the final state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{0} $");
+	print_answer(0,"$ \\ket{1} $");
+	print_answer(1,"$ -\\ket{0} $");
+	print_answer(0,"$ -\\ket{1} $");
+	print_answer(0,"$ \\stateminusket $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We apply a series of quantum operators to a single qubit that is in state $ \ket{0} $ at the beginning.
+If we observe the state $ 0 $ at the end, which of the following combinations is not possible, where $ M $ stands for a measurement and we apply the operators from the left to the right?
+ <br><br>
+<script> 
+	print_answer(0,"$ H,H,M $");
+	print_answer(0,"$ X, X, M $");
+	print_answer(0,"$ M, X, M , X , M $");
+	print_answer(0,"$ H, X, H , M $");
+	print_answer(1,"$ X , H , X , H , M $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have five qubits, say $ q_0,\ldots,q_4 $. We apply $X$ operator to $ q_0 $ and $ q_4 $. For the rest of qubits, we apply either identity operator or $ X $ operator. After making a measurement, we read the values from the qubits $ q_0,\ldots,q_4 $ as $ b_0,\ldots,b_4 $, respectively. 
+<br><br>
+If $ b = b_4 \cdots b_1 $ is a binary number, which of the following decimal numbers cannot be a value of $ b $? 
+<br><br>
+<script> 
+	print_answer(1,"$ 13 $");
+	print_answer(0,"$ 20 $");
+	print_answer(0,"$ 23 $");
+	print_answer(0,"$ 25 $");
+	print_answer(0,"$ 31 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+Hadamard operator $ H = \mymatrix{rr}{ \sqrttwo & \sqrttwo \\ \sqrttwo & -\sqrttwo } $ is a quantum operator and it preserves the length of any vector. Which one of the following operators is not a quantum operator? <i> (Hint: Test each matrix with a few quantum vectors, e.g., $ \ket{0} $, $ \ket{1} $, $ \ket{+} $, $ \ket{-} $, etc.) </i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{rr}{ \\sqrttwo & \\sqrttwo \\\\ -\\sqrttwo & \\sqrttwo } $");
+	print_answer(0,"$ \\mymatrix{rr}{ \\sqrttwo & -\\sqrttwo \\\\ \\sqrttwo & \\sqrttwo } $");
+	print_answer(0,"$ \\mymatrix{rr}{ -\\sqrttwo & \\sqrttwo \\\\ \\sqrttwo & \\sqrttwo } $");
+	print_answer(1,"$ \\mymatrix{rr}{ -\\sqrttwo & -\\sqrttwo \\\\ \\sqrttwo & \\sqrttwo } $");
+	print_answer(0,"$ \\mymatrix{rr}{ -\\sqrttwo & -\\sqrttwo \\\\ -\\sqrttwo & \\sqrttwo } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+What is $ XH $? </i>
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{rr}{ \\sqrttwo & \\sqrttwo \\\\ -\\sqrttwo & \\sqrttwo } $");
+	print_answer(1,"$ \\mymatrix{rr}{ \\sqrttwo & -\\sqrttwo \\\\ \\sqrttwo & \\sqrttwo } $");
+	print_answer(0,"$ \\mymatrix{rr}{ -\\sqrttwo & \\sqrttwo \\\\ \\sqrttwo & \\sqrttwo } $");
+	print_answer(0,"$ \\mymatrix{rr}{ -\\sqrttwo & -\\sqrttwo \\\\ \\sqrttwo & \\sqrttwo } $");
+	print_answer(0,"$ \\mymatrix{rr}{ -\\sqrttwo & -\\sqrttwo \\\\ -\\sqrttwo & \\sqrttwo } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+What is $ (XH)^2\ket{0} $? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{0} $");
+	print_answer(0,"$ \\ket{+} $");
+	print_answer(1,"$ \\ket{1} $");
+	print_answer(0,"$ \\ket{-} $");
+	print_answer(0,"$ -\\ket{0} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+What is $ (XH)^3\ket{0} $? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{+} $");
+	print_answer(0,"$ -\\ket{+} $");
+	print_answer(0,"$ \\ket{1} $");
+	print_answer(0,"$ \\ket{-} $");
+	print_answer(1,"$ -\\ket{-} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+
+<script> start_div();  </script>
+What is $ (XH)^5\ket{0} $? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\ket{+} $");
+	print_answer(1,"$ -\\ket{+} $");
+	print_answer(0,"$ \\ket{1} $");
+	print_answer(0,"$ \\ket{-} $");
+	print_answer(0,"$ -\\ket{-} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+What is $ (XH)^8\ket{0} $? 
+<br><br>
+<script> 
+	print_answer(1,"$ \\ket{0} $");
+	print_answer(0,"$ \\ket{+} $");
+	print_answer(0,"$ \\ket{1} $");
+	print_answer(0,"$ \\ket{-} $");
+	print_answer(0,"$ -\\ket{0} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+When a qubit is in the quantum state $ \ket{u} = \myrvector{\frac{3}{5} \\ -\frac{4}{5}} $, Hadamard operator is applied: $ \ket{u'} = H \ket{u} $. What is the probability of being in state $ \ket{1} $ in the new quantum state $ \ket{u'} $?
+<br><br>
+<script> 
+	print_answer(0,"$ 0.02 $");
+	print_answer(0,"$ 0.36 $");
+	print_answer(0,"$ 0.50 $");
+	print_answer(0,"$ 0.64 $");
+	print_answer(1,"$ 0.98 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+If $ \ket{u} = \myvector{x \\ 3x} $ is the quantum state of a qubit, what is the probability of being state $ \ket{0} $?
+<br><br>
+<script> 
+	print_answer(1,"$ 0.1 $");
+	print_answer(0,"$ 0.25 $");
+	print_answer(0,"$ 0.50 $");
+	print_answer(0,"$ 0.75 $");
+	print_answer(0,"$ 0.9 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+If $ \ket{u} = \myrvector{x \\ -2x \\ 2x \\ -x } $ is the quantum state of a quantum system with four states, what is the probability of being in the state having amplitude $ -2x $?
+<br><br>
+<script> 
+	print_answer(0,"$ 0 $");
+	print_answer(0,"$ 0.2 $");
+	print_answer(1,"$ 0.4 $");
+	print_answer(0,"$ 0.6 $");
+	print_answer(0,"$ 0.8 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script> start_div();  </script>
+We have a qubit, and we have a counter with value 0. 
+<br><br>
+Repeat 20 times:
+<ul>
+<li> Set the state of qubit to $ \ket{0} $. 
+<li> Apply Hadamard operator.
+<li> Make a measurement.
+	<ul><li>If state '0' is observed: the value of counter is increased by 2 and continue with the next iteration.</ul>
+<li> Apply Hadamard operator.
+<li> Make a measurement.
+	<ul><li>If state '1' is observed: the value of counter is decreased by 2 and continue with the next iteration.</ul> 
+<li> Apply Hadamard operator.
+<li> Make a measurement.
+	<ul>
+		<li>If state '0' is observed: the value of counter is increased by 1
+		<li>If state '1' is observed: the value of counter is decreased by 3
+	</ul>
+</ul>
+What is the expected value of counter at the end of the iterations?
+<br><br>
+<script> 
+	print_answer(0,"$ -10 $");
+	print_answer(0,"$ -5 $");
+	print_answer(0,"$ 0 $");
+	print_answer(1,"$ 5 $");
+	print_answer(0,"$ 10 $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+
+
+
+
+<script>
+	print_check_all(); 
+	inialize_user_answers()
+</script>
+

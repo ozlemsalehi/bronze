@@ -1,0 +1,273 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="mathjax_macro.js"></script>
+
+<script> qworld_header("Probabilistic Systems");  </script>
+<p align="right" style="font-family:monospace;"><i>prepared by Abuzer Yakaryilmaz (<a href="http://qworld.lu.lv/index.php/qlatvia/" target="_blank">QLatvia</a>)</i></p>
+
+<hr>
+<br>
+<b> Convention:</b> <i>The transition probability from the 4th state to the 2nd state is presented in the 4th column and the 2nd row of the corresponsing probabilistic operator.</i>
+<br><br>
+
+<hr>
+
+<script> start_div();  </script>
+What is the third value of $ u = \myvector{0.1 \\ 0.3 \\ ? \\ 0} $ if it represents a probabilistic state?
+<br><br>
+<script> 
+	print_answer(0,"$0.1$");
+	print_answer(0,"$0.3$");
+	print_answer(0,"$0.4$");
+	print_answer(1,"$0.6$");
+	print_answer(0,"$0.8$");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+What is the value of $ (x+y) $ if $ M = \mymatrix{cc}{ 0.2 & x \\ y & 0.7 } $ a probabilistic operator?
+<br><br>
+<script> 
+	print_answer(0,"$0.5$");
+	print_answer(0,"$0.9$");
+	print_answer(0,"$1.0$");
+	print_answer(1,"$1.1$");	
+	print_answer(0,"$1.5$");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+What is the value of $ (x+y+z) $ if $ M = \mymatrix{ccc}{ 0.2 & 0.3 & 0.5 \\ 0.4 & 0 & 0.1 \\ x & y & z } $ a probabilistic operator?
+<br><br>
+<script> 
+	print_answer(0,"$1.0$");
+	print_answer(1,"$1.5$");
+	print_answer(0,"$2.0$");
+	print_answer(0,"$2.5$");	
+	print_answer(0,"$3.0$");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+What is the value of $ (x+y+z) $ if $ M = \mymatrix{ccc}{ 0.8 & 0.7 & x \\ 0.2 & 0 & y \\ 0 & 0.3 & z } $ a probabilistic operator?
+<br><br>
+<script> 
+	print_answer(1,"$1.0$");
+	print_answer(0,"$1.5$");
+	print_answer(0,"$2.0$");
+	print_answer(0,"$2.5$");	
+	print_answer(0,"$3.0$");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+Which of the following probabilistic operator maps the probabilistic state $ v = \myvector{0.3 \\ 0.7} $ to the probabilistic state $ v' = \myvector{0.52 \\ 0.48} $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{cc}{0.1 & 0.3 \\\\ 0.9 & 0.7} $");
+	print_answer(0,"$ \\mymatrix{cc}{0.9 & 0.7 \\\\ 0.1 & 0.3} $");
+	print_answer(0,"$ \\mymatrix{cc}{0.9 & 0.3 \\\\ 0.1 & 0.7} $");
+	print_answer(0,"$ \\mymatrix{cc}{0.7 & 0.1 \\\\ 0.3 & 0.9} $");
+	print_answer(1,"$ \\mymatrix{cc}{0.1 & 0.7 \\\\ 0.9 & 0.3} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a probabilistic system with two states. When the system is in the first state with probability $0.4$, it applies a probabilistic operator such that (i) the transition probability from the first state to the second state is $0.2$ and (ii) the transition probability from the second state to the second state is $ 0.5 $. What is the next probabilistic state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myvector{0.72 \\\\ 0.28 } $");
+	print_answer(1,"$ \\myvector{0.62 \\\\ 0.38 } $");
+	print_answer(0,"$ \\myvector{0.52 \\\\ 0.48 } $");
+	print_answer(0,"$ \\myvector{0.42 \\\\ 0.48 } $");
+	print_answer(0,"$ \\myvector{0.32 \\\\ 0.68 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a probabilistic system with two states. Starting with the initial probabilistic state $ u = \mymatrix{cc}{0.4 \\ 0.6} $, the probabilistic operator $ M = \mymatrix{cc}{0.5 & 1 \\ 0.5 & 0} $ is applied three times. What is the final probabilistic state? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\myvector{0.1 \\\\ 0.9 } $");
+	print_answer(0,"$ \\myvector{0.3 \\\\ 0.7 } $");
+	print_answer(0,"$ \\myvector{0.5 \\\\ 0.5 } $");
+	print_answer(1,"$ \\myvector{0.7 \\\\ 0.3 } $");
+	print_answer(0,"$ \\myvector{0.9 \\\\ 0.1 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a system composed by two probabilistic bits. The probability of being in the state $ 0 $ in the first bit is $ 0.6 $, and the same probability for the second bit is $ 0.2 $. What is the probabilistic state of the composite system? 
+<br><br>
+<script> 
+	print_answer(0,"$ \\myvector{0.6 \\\\ 0.2 \\\\ 0.6 \\\\ 0.2} $");
+	print_answer(1,"$ \\myvector{0.12 \\\\ 0.48 \\\\ 0.08 \\\\ 0.32 } $");
+	print_answer(0,"$ \\myvector{0 \\\\ 0.6 \\\\ 0.2 \\\\ 0.2 } $");
+	print_answer(0,"$ \\myvector{0.6 \\\\ 0.2 \\\\ 0 \\\\ 0 } $");
+	print_answer(0,"$ \\myvector{0.62 \\\\ 0 \\\\ 0 \\\\ 0.38 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+The probabilistic state of the composite system with three bits is represented by a vector with eight entries. Which entry represents the state $ 010 $?
+<br><br>
+<script> 
+	print_answer(0,"the first");
+	print_answer(0,"the second");
+	print_answer(1,"the third");
+	print_answer(0,"the fourth");
+	print_answer(0,"the fifth");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+The probabilistic state of the composite system with three bits is represented by a vector with eight entries. Which state corresponds to the 6th entry?
+<br><br>
+<script> 
+	print_answer(0,"010");
+	print_answer(0,"011");
+	print_answer(0,"100");
+	print_answer(1,"101");
+	print_answer(0,"110");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with two probabilistic bits. Which one of the following cannot be a state of this system?
+<br><br>
+<script> 
+	print_answer(1,"$ \\dfrac{1}{2} \\pstate{00} + \\dfrac{1}{3} \\pstate{10} + \\dfrac{1}{4} \\pstate{11} $");
+	print_answer(0,"$ \\dfrac{1}{3} \\pstate{00} + \\dfrac{1}{3} \\pstate{10} + \\dfrac{1}{3} \\pstate{11} $");
+	print_answer(0,"$ \\dfrac{1}{4} \\pstate{00} + \\dfrac{1}{4} \\pstate{10} + \\dfrac{1}{2} \\pstate{11} $");
+	wrt("<br>");wrt("<br>");
+	print_answer(0,"$ \\dfrac{1}{3} \\pstate{00} + \\dfrac{1}{6} \\pstate{10} + \\dfrac{1}{2} \\pstate{11} $");	
+	print_answer(0,"$ \\dfrac{2}{3} \\pstate{00} + \\dfrac{1}{6} \\pstate{10} + \\dfrac{1}{6} \\pstate{11} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with two probabilistic bits. Let $ v = \dfrac{1}{7} \pstate{01} + \dfrac{2}{7} \pstate{00} + \dfrac{4}{7}\pstate{10} $ be its probabilistic state. Which one of the following represents this state?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myvector{ \\frac{1}{7} \\\\ \\frac{2}{7} \\\\ \\frac{4}{7} \\\\ 0 } $");
+	print_answer(0,"$ \\myvector{ 0 \\\\ \\frac{1}{7} \\\\ \\frac{2}{7} \\\\ \\frac{4}{7}  } $");
+	print_answer(1,"$ \\myvector{ \\frac{2}{7} \\\\ \\frac{1}{7} \\\\ \\frac{4}{7} \\\\ 0 } $");
+	print_answer(0,"$ \\myvector{ \\frac{4}{7} \\\\ \\frac{1}{7} \\\\ 0 \\\\ \\frac{2}{7}  } $");
+	print_answer(0,"$ \\myvector{ 0 \\\\ \\frac{4}{7} \\\\ \\frac{2}{7} \\\\ \\frac{1}{7} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+Which of the following transitions belong to the operator $ \mymatrix{cc|cc}{ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ \hline 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 } $?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{00} \\\\ \\pstate{01} \\rightarrow \\pstate{01} \\\\ \\pstate{10} \\rightarrow \\pstate{11} \\\\ \\pstate{11} \\rightarrow \\pstate{10} } $");
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{00} \\\\ \\pstate{01} \\rightarrow \\pstate{01} \\\\ \\pstate{10} \\rightarrow \\pstate{10} \\\\ \\pstate{11} \\rightarrow \\pstate{11} } $");
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{11} \\\\ \\pstate{01} \\rightarrow \\pstate{10} \\\\ \\pstate{10} \\rightarrow \\pstate{01} \\\\ \\pstate{11} \\rightarrow \\pstate{00} } $");
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{11} \\\\ \\pstate{01} \\rightarrow \\pstate{01} \\\\ \\pstate{10} \\rightarrow \\pstate{10} \\\\ \\pstate{11} \\rightarrow \\pstate{00} } $");
+	print_answer(1,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{10} \\\\ \\pstate{01} \\rightarrow \\pstate{11} \\\\ \\pstate{10} \\rightarrow \\pstate{01} \\\\ \\pstate{11} \\rightarrow \\pstate{00} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We apply a controlled-NOT operator on two probabilistic bit where the second one is the controlled bit and the first one is the target the bit. Which of the following transitions represent this operator?
+<br><br>
+<script> 
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{00} \\\\ \\pstate{01} \\rightarrow \\pstate{01} \\\\ \\pstate{10} \\rightarrow \\pstate{11} \\\\ \\pstate{11} \\rightarrow \\pstate{10} } $");
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{00} \\\\ \\pstate{01} \\rightarrow \\pstate{01} \\\\ \\pstate{10} \\rightarrow \\pstate{10} \\\\ \\pstate{11} \\rightarrow \\pstate{11} } $");
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{00} \\\\ \\pstate{01} \\rightarrow \\pstate{10} \\\\ \\pstate{10} \\rightarrow \\pstate{01} \\\\ \\pstate{11} \\rightarrow \\pstate{11} } $");
+	print_answer(1,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{00} \\\\ \\pstate{01} \\rightarrow \\pstate{11} \\\\ \\pstate{10} \\rightarrow \\pstate{10} \\\\ \\pstate{11} \\rightarrow \\pstate{01} } $");
+	print_answer(0,"$ \\myarray{cc}{ \\pstate{00} \\rightarrow \\pstate{11} \\\\ \\pstate{01} \\rightarrow \\pstate{10} \\\\ \\pstate{10} \\rightarrow \\pstate{01} \\\\ \\pstate{11} \\rightarrow \\pstate{00} } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We apply a controlled-NOT operator on two probabilistic bit where the second one is the controlled bit and the first one is the target the bit. Which of the following matrix represent this operator?
+<br><br>
+<script> 
+	print_answer(0,"$ \\mymatrix{cc|cc}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ \\hline 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 } $");
+	print_answer(0,"$ \\mymatrix{cc|cc}{ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ \\hline 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(0,"$ \\mymatrix{cc|cc}{ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ \\hline 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 } $");
+	print_answer(1,"$ \\mymatrix{cc|cc}{ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ \\hline 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 } $");
+	print_answer(0,"$ \\mymatrix{cc|cc}{ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ \\hline 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 } $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with two probabilistic bits. 
+<ul>
+	<li>First, both bits are set to the state 0.</li>
+	<li>Second, the fair coin operator $ \faircoin $ is applied to the first bit, and the NOT operator $ \X $ is applied to the second bit.</li>
+	<li>Third, the CNOT operator $ \CNOT $ is applied to the composite system.</li>
+</ul>
+What is the final probabilistic state of the composite system?
+<br><br>
+<script> 
+	print_answer(1,"$ \\donehalf \\pstate{01} + \\donehalf \\pstate{10} $");
+	print_answer(0,"$ \\donehalf \\pstate{00} + \\donehalf \\pstate{11} $");
+	print_answer(0,"$ \\donehalf \\pstate{01} + \\donehalf \\pstate{11} $");
+	print_answer(0,"$ \\donehalf \\pstate{00} + \\donehalf \\pstate{01} $");
+	print_answer(0,"$ \\donehalf \\pstate{10} + \\donehalf \\pstate{01} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+<script> start_div();  </script>
+We have a composite system with three probabilistic bits. 
+<ul>
+	<li>First, all bits are set to the state 0. </li>
+	<li>Second, the fair coin operator $ \faircoin $ is applied to the second bit, and the NOT operator $ \X $ is applied to the first bit. </li>
+	<li>Third, the CNOT operator is applied on the second and the third bits where the second bit is the controlled bit and the third bit is the target bit. </li>
+	<li>
+	Fourth, the CNOT operator is applied on the third and first bits where the third operator is the controlled bit and the first bit is the target bit. </li>
+</ul>
+What is the final probabilistic state of the composite system?
+<br><br>
+<script> 
+	print_answer(0,"$ \\donehalf \\pstate{000} + \\donehalf \\pstate{010} $");
+	print_answer(1,"$ \\donehalf \\pstate{100} + \\donehalf \\pstate{011} $");
+	print_answer(0,"$ \\donehalf \\pstate{100} + \\donehalf \\pstate{110} $");
+	print_answer(0,"$ \\donehalf \\pstate{100} + \\donehalf \\pstate{010} $");
+	print_answer(0,"$ \\donehalf \\pstate{101} + \\donehalf \\pstate{010} $");
+	print_check_now();
+	end_div();
+</script>
+<br>
+
+
+<script>
+	print_check_all(); 
+	inialize_user_answers()
+</script>
+
