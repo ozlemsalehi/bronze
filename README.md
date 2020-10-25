@@ -1,7 +1,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/ozlemsalehi%2Fbronze_istanbul/master?urlpath=lab/tree/index_bronze.ipynb)
 
 # Read Me
-My personal fork of Qturkey's bronze repository
+This is QTurkey version of Bronze repository.
 
 # How to use
 
